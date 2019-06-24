@@ -248,4 +248,66 @@ public class gxOnlineCheckCase extends BaseMethod{
         Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"地址：云南省昆明市高新技术产业开发区科医路166号");
         Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[4]/div/a")).getText(),"http://www.kpc.com.cn");
     }
+
+    /**
+     * http://www.gxzg.org.cn      查看网址首页显示是否正常，查企业、查网站、查产品功能是否正常、各详情页是否能正常显示
+     * @throws InterruptedException
+     */
+    @Test
+    public void gxOnlineCheck015() throws InterruptedException {
+        driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        driver.get("http://www.gxzg.org.cn");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).click();
+        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).sendKeys("纳网");
+        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/a")).click();
+        WebDriverWait wait = new WebDriverWait(driver,10,1);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"searchCompanyLine\"]/li[1]/div[2]/h6/a[1]")));
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[1]/div[2]/h6/a[1]"))
+                .getText(),"北京纳网科技有限公司");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[2]/div[2]/h6/a[1]")).getText(),"厦门纳网科技股份有限公司");
+        driver.findElement(By.xpath("/html/body/div[2]/ul/li[2]")).click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/a")).getText(),"厦门纳网科技股份有限公司官网");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/span[1]")).getText(),"信用官网");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/a")).getText(),"www.nawang.cn");
+        driver.findElement(By.xpath("/html/body/div[2]/ul/li[3]")).click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6335\"]")).getAttribute("pname"),"信用官网-安全可信赖的官网形象");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[1]/div[2]/div[2]/span")).getText(),"北京纳网科技有限公司");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6336\"]")).getAttribute("pname"),"信用直购-商品直购辨伪");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[2]/div[2]/div[2]/span")).getText(),"北京纳网科技有限公司");
+    }
+
+    /**
+     * https://www.gxzg.org.cn      查看网址首页显示是否正常，查企业、查网站、查产品功能是否正常、各详情页是否能正常显示
+     * @throws InterruptedException
+     */
+    @Test
+    public void gxOnlineCheckCase016() throws InterruptedException {
+        driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        driver.get("https://www.gxzg.org.cn");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).click();
+        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).sendKeys("纳网");
+        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/a")).click();
+        WebDriverWait wait = new WebDriverWait(driver,10,1);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"searchCompanyLine\"]/li[1]/div[2]/h6/a[1]")));
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[1]/div[2]/h6/a[1]"))
+                .getText(),"北京纳网科技有限公司");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[2]/div[2]/h6/a[1]")).getText(),"厦门纳网科技股份有限公司");
+        driver.findElement(By.xpath("/html/body/div[2]/ul/li[2]")).click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/a")).getText(),"厦门纳网科技股份有限公司官网");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/span[1]")).getText(),"信用官网");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/a")).getText(),"www.nawang.cn");
+        driver.findElement(By.xpath("/html/body/div[2]/ul/li[3]")).click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6335\"]")).getAttribute("pname"),"信用官网-安全可信赖的官网形象");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[1]/div[2]/div[2]/span")).getText(),"北京纳网科技有限公司");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6336\"]")).getAttribute("pname"),"信用直购-商品直购辨伪");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[2]/div[2]/div[2]/span")).getText(),"北京纳网科技有限公司");
+    }
 }
