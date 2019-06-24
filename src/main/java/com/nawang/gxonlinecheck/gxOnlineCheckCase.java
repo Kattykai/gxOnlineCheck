@@ -118,7 +118,7 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     * （6）福建恒安集团有限公司：			福建恒安集团有限公司.中国   查看页面是否显示正常、通栏是否显示正常
+     * （6）福建恒安集团有限公司：	福建恒安集团有限公司.中国   查看页面是否显示正常、通栏是否显示正常
      * @throws InterruptedException
      */
     @Test
@@ -132,7 +132,7 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     * （7）青岛海尔股份有限公司：	青岛海尔股份有限公司.中国                   查看页面是否显示正常
+     * （7）青岛海尔股份有限公司：	青岛海尔股份有限公司.中国    查看页面是否显示正常
      * @throws InterruptedException
      */
     @Test
@@ -163,7 +163,7 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     *（9）华为技术有限公司：		华为技术有限公司.中国                       查看页面是否显示正常、通栏是否显示正常
+     *（9）华为技术有限公司：华为技术有限公司.中国    查看页面是否显示正常、通栏是否显示正常
      * @throws InterruptedException
      */
     @Test
@@ -177,7 +177,7 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     * （10）北京百度网讯科技有限公司：		北京百度网讯科技有限公司.中国   查看页面是否显示正常、通栏是否显示正常
+     * （10）北京百度网讯科技有限公司：	北京百度网讯科技有限公司.中国   查看页面是否显示正常、通栏是否显示正常
      * @throws InterruptedException
      */
     @Test
@@ -191,7 +191,7 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     * （11）万达电影股份有限公司：	万达电影股份有限公司.中国                       查看页面是否显示正常、通栏是否显示正常
+     * （11）万达电影股份有限公司：	万达电影股份有限公司.中国     查看页面是否显示正常、通栏是否显示正常
      * @throws InterruptedException
      */
     @Test
@@ -205,7 +205,7 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     *（12）厦门纳网科技股份有限公司：		厦门纳网科技股份有限公司.中国   查看页面是否显示正常、通栏是否显示正常
+     *（12）厦门纳网科技股份有限公司：厦门纳网科技股份有限公司.中国   查看页面是否显示正常、通栏是否显示正常
      * @throws InterruptedException
      */
     @Test
@@ -219,7 +219,7 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     * （13）厦门中拓互联科技有限公司：厦门中拓互联网络科技有限公司.中国                查看页面是否显示正常、通栏是否显示正常
+     * （13）厦门中拓互联科技有限公司：厦门中拓互联网络科技有限公司.中国    查看页面是否显示正常、通栏是否显示正常
      * @throws InterruptedException
      */
     @Test
@@ -233,7 +233,7 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     * （14）昆药集团股份有限公司：			昆药集团股份有限公司.中国       查看页面是否显示正常
+     * （14）昆药集团股份有限公司：	昆药集团股份有限公司.中国     查看页面是否显示正常
      * @throws InterruptedException
      */
     @Test
