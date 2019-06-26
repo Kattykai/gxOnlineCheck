@@ -30,9 +30,9 @@ public class BaseMethod {
     }
 
     public void bannerCheck(WebDriver driver) throws InterruptedException {
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"publicMainInformation\"]/div/ul/li[3]/div/em")).getText(),"ä¿¡ç”¨å®˜ç½‘é‡‘ç‰Œç¤ºèŒƒå•ä½");
-        Assert.assertEquals(driver.findElement(By.className("shamWeb")).getText(),"è™šå‡æˆ–æ¬ºè¯ˆç½‘ç«™ å®‰å…¨");
-        Assert.assertEquals(driver.findElement(By.className("spiteWeb")).getText(),"æŒ‚é©¬æˆ–æ¶æ„ç½‘ç«™ å®‰å…¨");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"publicMainInformation\"]/div/ul/li[3]/div/em")).getText(),"ĞÅÓÃ¹ÙÍø½ğÅÆÊ¾·¶µ¥Î»");
+        Assert.assertEquals(driver.findElement(By.className("shamWeb")).getText(),"Ğé¼Ù»òÆÛÕ©ÍøÕ¾ °²È«");
+        Assert.assertEquals(driver.findElement(By.className("spiteWeb")).getText(),"¹ÒÂí»ò¶ñÒâÍøÕ¾ °²È«");
         driver.findElement(By.id("publicInfoHide")).click();
         Thread.sleep(1000);
         driver.findElement(By.id("publicStatusHide")).click();

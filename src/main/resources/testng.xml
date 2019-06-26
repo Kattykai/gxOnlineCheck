@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name = "自动化测试">
+    <test name = "公信线上巡检">
+        <classes>
+            <class name="com.nawang.gxonlinecheck.gxOnlineCheckCase">com.nawang.gxonlinecheck.gxOnlineCheckCase</class>
+        </classes>
+    </test>
+    <listeners>
+<!--        <listener class-name = "com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>-->
+        <listener class-name = "com.nawang.gxonlinecheck.ExtentTestNGIReporterListener"/>
+    </listeners>
+
+</suite>

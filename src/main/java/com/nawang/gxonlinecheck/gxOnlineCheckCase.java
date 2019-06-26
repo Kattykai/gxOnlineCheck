@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -32,282 +33,298 @@ public class gxOnlineCheckCase extends BaseMethod{
     }
 
     /**
-     * ï¼ˆ1ï¼‰ä¸Šæµ·æ±½è½¦é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸ï¼šä¸Šæµ·æ±½è½¦é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½   æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨1£©ÉÏº£Æû³µ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾£ºÉÏº£Æû³µ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú   ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase001() throws InterruptedException {
+        Reporter.log("http://ÉÏº£Æû³µ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://ä¸Šæµ·æ±½è½¦é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--fhqywn2dsxdr4e505aexie2bv31fi44ao5pljb.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
         WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.textToBe(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[1]/h2/a"),"ä¸Šæµ·æ±½è½¦é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸"));
-        Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[1]/h2/a")).getText(), "ä¸Šæµ·æ±½è½¦é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[2]/span[1]")).getText(), "ç”µè¯ï¼š021-22011888");
-        Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[2]/span[2]")).getText(), "é‚®ç®±ï¼šsaicmotor@saicmotor.com");
-        Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[3]/span")).getText(), "åœ°å€ï¼šä¸­å›½ï¼ˆä¸Šæµ·ï¼‰è‡ªç”±è´¸æ˜“è¯•éªŒåŒºæ¾æ¶›è·¯563å·1å·æ¥¼509å®¤");
+        wait.until(ExpectedConditions.textToBe(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[1]/h2/a"),"ÉÏº£Æû³µ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾"));
+        Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[1]/h2/a")).getText(), "ÉÏº£Æû³µ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[2]/span[1]")).getText(), "µç»°£º021-22011888");
+        Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[2]/span[2]")).getText(), "ÓÊÏä£ºsaicmotor@saicmotor.com");
+        Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[3]/span")).getText(), "µØÖ·£ºÖĞ¹ú£¨ÉÏº££©×ÔÓÉÃ³Ò×ÊÔÑéÇøËÉÌÎÂ·563ºÅ1ºÅÂ¥509ÊÒ");
         Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[4]/div/a")).getText(), "http://www.saicmotor.com");
     }
 
     /**
-     * (2)å“ˆè¯é›†å›¢æœ‰é™å…¬å¸ï¼šå“ˆè¯é›†å›¢æœ‰é™å…¬å¸.ä¸­å›½  æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * (2)¹şÒ©¼¯ÍÅÓĞÏŞ¹«Ë¾£º¹şÒ©¼¯ÍÅÓĞÏŞ¹«Ë¾.ÖĞ¹ú  ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase002() throws InterruptedException {
+        Reporter.log("http://¹şÒ©¼¯ÍÅÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://å“ˆè¯é›†å›¢æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--55qx5d1ri1ez65ai42bxv1a50a.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
         WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a"),"å“ˆè¯é›†å›¢æœ‰é™å…¬å¸"));
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")).getText(),"å“ˆè¯é›†å›¢æœ‰é™å…¬å¸");
+        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a"),"¹şÒ©¼¯ÍÅÓĞÏŞ¹«Ë¾"));
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")).getText(),"¹şÒ©¼¯ÍÅÓĞÏŞ¹«Ë¾");
         bannerCheck(driver);
     }
 
     /**
-     * ï¼ˆ3ï¼‰tclé›†å›¢è‚¡ä»½æœ‰é™å…¬å¸ï¼š	tclé›†å›¢è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½                    æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨3£©tcl¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾£º	tcl¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú                    ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase003() throws InterruptedException {
+        Reporter.log("http://tcl¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://tclé›†å›¢è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--tcl-pv9d94i15eergg72b0e2ccl5b7bb.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
         WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.textToBe(By.className("cursor-default"),"TCLé›†å›¢è‚¡ä»½æœ‰é™å…¬å¸"));
-        Assert.assertEquals(driver.findElement(By.className("cursor-default")).getText(),"TCLé›†å›¢è‚¡ä»½æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.className("company-contact")).getText(),"ç”µè¯ï¼š0752-2288333 é‚®ç®±ï¼š-");
-        Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"åœ°å€ï¼šå¹¿ä¸œçœæƒ å·å¸‚ä»²æºé«˜æ–°æŠ€æœ¯å¼€å‘åŒºåä¹å·å°åŒº");
+        wait.until(ExpectedConditions.textToBe(By.className("cursor-default"),"TCL¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾"));
+        Assert.assertEquals(driver.findElement(By.className("cursor-default")).getText(),"TCL¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.className("company-contact")).getText(),"µç»°£º0752-2288333 ÓÊÏä£º-");
+        Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"µØÖ·£º¹ã¶«Ê¡»İÖİÊĞÖÙâı¸ßĞÂ¼¼Êõ¿ª·¢ÇøÊ®¾ÅºÅĞ¡Çø");
         Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[4]/div/a")).getText(),"http://www.tcl.com");
     }
 
     /**
-     * ï¼ˆ4ï¼‰å†œå¤«å±±æ³‰è‚¡ä»½æœ‰é™å…¬å¸ï¼š			å†œå¤«å±±æ³‰è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½   æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨4£©Å©·òÉ½Èª¹É·İÓĞÏŞ¹«Ë¾£º			Å©·òÉ½Èª¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú   ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase004() throws InterruptedException {
+        Reporter.log("http://Å©·òÉ½Èª¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://å†œå¤«å±±æ³‰è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--doq22dces0hctjx9epowoqkk48bcl7b.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," å†œå¤«å±±æ³‰è‚¡ä»½æœ‰é™å…¬å¸"));
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")).getText(),"å†œå¤«å±±æ³‰è‚¡ä»½æœ‰é™å…¬å¸");
+//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," Å©·òÉ½Èª¹É·İÓĞÏŞ¹«Ë¾"));
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")).getText(),"Å©·òÉ½Èª¹É·İÓĞÏŞ¹«Ë¾");
         bannerCheck(driver);
     }
 
     /**
      *
-     * ï¼ˆ5ï¼‰ä¸‰ä¸€é‡å·¥è‚¡ä»½æœ‰é™å…¬å¸ï¼š	ä¸‰ä¸€é‡å·¥è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½                   æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨5£©ÈıÒ»ÖØ¹¤¹É·İÓĞÏŞ¹«Ë¾£º	ÈıÒ»ÖØ¹¤¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú                   ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase005() throws InterruptedException {
+        Reporter.log("http://ÈıÒ»ÖØ¹¤¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://ä¸‰ä¸€é‡å·¥è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--4gqra74eh5efrespub8otj2cmk6aepj.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.className("cursor-default")," ä¸‰ä¸€é‡å·¥è‚¡ä»½æœ‰é™å…¬å¸"));
-        Assert.assertEquals(driver.findElement(By.className("cursor-default")).getText(),"ä¸‰ä¸€é‡å·¥è‚¡ä»½æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.className("company-contact")).getText(),"ç”µè¯ï¼š010-60738888 é‚®ç®±ï¼šsanyir@sany.com.cn");
-        Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"åœ°å€ï¼šåŒ—äº¬å¸‚æ˜Œå¹³åŒºåŒ—æ¸…è·¯8å·6å¹¢5æ¥¼");
+//        wait.until(ExpectedConditions.textToBe(By.className("cursor-default")," ÈıÒ»ÖØ¹¤¹É·İÓĞÏŞ¹«Ë¾"));
+        Assert.assertEquals(driver.findElement(By.className("cursor-default")).getText(),"ÈıÒ»ÖØ¹¤¹É·İÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.className("company-contact")).getText(),"µç»°£º010-60738888 ÓÊÏä£ºsanyir@sany.com.cn");
+        Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"µØÖ·£º±±¾©ÊĞ²ıÆ½Çø±±ÇåÂ·8ºÅ6´±5Â¥");
         Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[4]/div/a")).getText(),"http://www.sanyhi.com");
     }
 
     /**
-     * ï¼ˆ6ï¼‰ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸ï¼š	ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸.ä¸­å›½   æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨6£©¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾£º	¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾.ÖĞ¹ú   ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase006() throws InterruptedException {
+        Reporter.log("http://¸½¼şºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--55qx5d59cd2g33e89b4ut079a8c6cw7a.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸"));
+//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾"));
         bannerCheck(driver);
     }
 
     /**
-     * ï¼ˆ7ï¼‰é’å²›æµ·å°”è‚¡ä»½æœ‰é™å…¬å¸ï¼š	é’å²›æµ·å°”è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½    æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨7£©Çàµºº£¶û¹É·İÓĞÏŞ¹«Ë¾£º	Çàµºº£¶û¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú    ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase007() throws InterruptedException {
+        Reporter.log("http://Çàµºº£¶û¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://é’å²›æµ·å°”è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--doq22d51cg7mjtaw41cetkot2bq13bsdc.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.className("cursor-default")," ä¸‰ä¸€é‡å·¥è‚¡ä»½æœ‰é™å…¬å¸"));
-        Assert.assertEquals(driver.findElement(By.className("cursor-default")).getText(),"é’å²›æµ·å°”è‚¡ä»½æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.className("company-contact")).getText(),"ç”µè¯ï¼š0532-86762198 é‚®ç®±ï¼šliuxiaol@haier.com");
-        Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"åœ°å€ï¼šé’å²›å¸‚å´‚å±±åŒºæµ·å°”å·¥ä¸šå›­å†…");
+//        wait.until(ExpectedConditions.textToBe(By.className("cursor-default")," ÈıÒ»ÖØ¹¤¹É·İÓĞÏŞ¹«Ë¾"));
+        Assert.assertEquals(driver.findElement(By.className("cursor-default")).getText(),"Çàµºº£¶û¹É·İÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.className("company-contact")).getText(),"µç»°£º0532-86762198 ÓÊÏä£ºliuxiaol@haier.com");
+        Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"µØÖ·£ºÇàµºÊĞáÀÉ½Çøº£¶û¹¤ÒµÔ°ÄÚ");
         Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[4]/div/a")).getText(),"http://www.linkcook.cn");
     }
 
     /**
-     * ï¼ˆ8ï¼‰ä¸‡ç§‘ä¼ä¸šè‚¡ä»½æœ‰é™å…¬å¸ï¼š			ä¸‡ç§‘ä¼ä¸šè‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½   æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨8£©Íò¿ÆÆóÒµ¹É·İÓĞÏŞ¹«Ë¾£º			Íò¿ÆÆóÒµ¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú   ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase008() throws InterruptedException {
+        Reporter.log("http://Íò¿ÆÆóÒµ¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://ä¸‡ç§‘ä¼ä¸šè‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--chqrbv8boa112a15ef47b4n5as2mcf5c.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸"));
+//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾"));
         bannerCheck(driver);
     }
 
     /**
-     *ï¼ˆ9ï¼‰åä¸ºæŠ€æœ¯æœ‰é™å…¬å¸ï¼šåä¸ºæŠ€æœ¯æœ‰é™å…¬å¸.ä¸­å›½    æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     *£¨9£©»ªÎª¼¼ÊõÓĞÏŞ¹«Ë¾£º»ªÎª¼¼ÊõÓĞÏŞ¹«Ë¾.ÖĞ¹ú    ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase009() throws InterruptedException {
+        Reporter.log("http://»ªÎª¼¼ÊõÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://åä¸ºæŠ€æœ¯æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--siqt1fjybrtt77cbhguh7065a.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸"));
+//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾"));
         bannerCheck(driver);
     }
 
     /**
-     * ï¼ˆ10ï¼‰åŒ—äº¬ç™¾åº¦ç½‘è®¯ç§‘æŠ€æœ‰é™å…¬å¸ï¼š	åŒ—äº¬ç™¾åº¦ç½‘è®¯ç§‘æŠ€æœ‰é™å…¬å¸.ä¸­å›½   æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨10£©±±¾©°Ù¶ÈÍøÑ¶¿Æ¼¼ÓĞÏŞ¹«Ë¾£º	±±¾©°Ù¶ÈÍøÑ¶¿Æ¼¼ÓĞÏŞ¹«Ë¾.ÖĞ¹ú   ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase010() throws InterruptedException {
+        Reporter.log("http://±³¾°°Ù¶ÈÍøÑ¶¿Æ¼¼ÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://åŒ—äº¬ç™¾åº¦ç½‘è®¯ç§‘æŠ€æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--1lqw0etvb1zas40bbtfh6inn7a4igjyob96a9w0a.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸"));
+//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾"));
         bannerCheck(driver);
     }
 
     /**
-     * ï¼ˆ11ï¼‰ä¸‡è¾¾ç”µå½±è‚¡ä»½æœ‰é™å…¬å¸ï¼š	ä¸‡è¾¾ç”µå½±è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½     æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨11£©Íò´ïµçÓ°¹É·İÓĞÏŞ¹«Ë¾£º	Íò´ïµçÓ°¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú     ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase011() throws InterruptedException {
+        Reporter.log("http://Íò´ïµçÓ°¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://ä¸‡è¾¾ç”µå½±è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--chq4wn2dsxdruvkxks9xn2u284azzn.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸"));
+//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾"));
         bannerCheck(driver);
     }
 
     /**
-     *ï¼ˆ12ï¼‰å¦é—¨çº³ç½‘ç§‘æŠ€è‚¡ä»½æœ‰é™å…¬å¸ï¼šå¦é—¨çº³ç½‘ç§‘æŠ€è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½   æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     *£¨12£©ÏÃÃÅÄÉÍø¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾£ºÏÃÃÅÄÉÍø¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú   ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase012() throws InterruptedException {
+        Reporter.log("http://ÏÃÃÅÄÉÍø¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://å¦é—¨çº³ç½‘ç§‘æŠ€è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--doq22d28bpj133dchgsq9ayfiwlbc5f158f49a.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸"));
+//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾"));
         bannerCheck(driver);
     }
 
     /**
-     * ï¼ˆ13ï¼‰å¦é—¨ä¸­æ‹“äº’è”ç§‘æŠ€æœ‰é™å…¬å¸ï¼šå¦é—¨ä¸­æ‹“äº’è”ç½‘ç»œç§‘æŠ€æœ‰é™å…¬å¸.ä¸­å›½    æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸ã€é€šæ æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨13£©ÏÃÃÅÖĞÍØ»¥Áª¿Æ¼¼ÓĞÏŞ¹«Ë¾£ºÏÃÃÅÖĞÍØ»¥ÁªÍøÂç¿Æ¼¼ÓĞÏŞ¹«Ë¾.ÖĞ¹ú    ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£¡¢Í¨À¸ÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase013() throws InterruptedException {
+        Reporter.log("http://ÏÃÃÅÖĞÍØ»¥ÁªÍøÂç¿Æ¼¼ÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://å¦é—¨ä¸­æ‹“äº’è”ç½‘ç»œç§‘æŠ€æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--fiq8i81fc3c2l333etqas3yk67b3sk0gb12fx55h4gb.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ç¦å»ºæ’å®‰é›†å›¢æœ‰é™å…¬å¸"));
+//        wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"companyNameBox\"]/p/em/a")," ¸£½¨ºã°²¼¯ÍÅÓĞÏŞ¹«Ë¾"));
         bannerCheck(driver);
     }
 
     /**
-     * ï¼ˆ14ï¼‰æ˜†è¯é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸ï¼š	æ˜†è¯é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½     æŸ¥çœ‹é¡µé¢æ˜¯å¦æ˜¾ç¤ºæ­£å¸¸
+     * £¨14£©À¥Ò©¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾£º	À¥Ò©¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú     ²é¿´Ò³ÃæÊÇ·ñÏÔÊ¾Õı³£
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase014() throws InterruptedException {
+        Reporter.log("http://À¥Ò©¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾.ÖĞ¹ú");
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-        driver.get("http://æ˜†è¯é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸.ä¸­å›½");
+        driver.get("http://xn--doq22d51cg8dy70aqmbmw6gcye5r3cu7a.xn--fiqs8s/");
         driver.switchTo().frame("main");
         Thread.sleep(2000);
-//        wait.until(ExpectedConditions.textToBe(By.className("cursor-default")," ä¸‰ä¸€é‡å·¥è‚¡ä»½æœ‰é™å…¬å¸"));
-        Assert.assertEquals(driver.findElement(By.className("cursor-default")).getText(),"æ˜†è¯é›†å›¢è‚¡ä»½æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.className("company-contact")).getText(),"ç”µè¯ï¼š0871-68319868 é‚®ç®±ï¼šoffice.kpc@holley.cn");
-        Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"åœ°å€ï¼šäº‘å—çœæ˜†æ˜å¸‚é«˜æ–°æŠ€æœ¯äº§ä¸šå¼€å‘åŒºç§‘åŒ»è·¯166å·");
+//        wait.until(ExpectedConditions.textToBe(By.className("cursor-default")," ÈıÒ»ÖØ¹¤¹É·İÓĞÏŞ¹«Ë¾"));
+        Assert.assertEquals(driver.findElement(By.className("cursor-default")).getText(),"À¥Ò©¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.className("company-contact")).getText(),"µç»°£º0871-68319868 ÓÊÏä£ºoffice.kpc@holley.cn");
+        Assert.assertEquals(driver.findElement(By.className("company-site")).getText(),"µØÖ·£ºÔÆÄÏÊ¡À¥Ã÷ÊĞ¸ßĞÂ¼¼Êõ²úÒµ¿ª·¢Çø¿ÆÒ½Â·166ºÅ");
         Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/dl/dd[1]/ul/li[4]/div/a")).getText(),"http://www.kpc.com.cn");
     }
 
     /**
-     * http://www.gxzg.org.cn      æŸ¥çœ‹ç½‘å€é¦–é¡µæ˜¾ç¤ºæ˜¯å¦æ­£å¸¸ï¼ŒæŸ¥ä¼ä¸šã€æŸ¥ç½‘ç«™ã€æŸ¥äº§å“åŠŸèƒ½æ˜¯å¦æ­£å¸¸ã€å„è¯¦æƒ…é¡µæ˜¯å¦èƒ½æ­£å¸¸æ˜¾ç¤º
+     * http://www.gxzg.org.cn      ²é¿´ÍøÖ·Ê×Ò³ÏÔÊ¾ÊÇ·ñÕı³££¬²éÆóÒµ¡¢²éÍøÕ¾¡¢²é²úÆ·¹¦ÄÜÊÇ·ñÕı³£¡¢¸÷ÏêÇéÒ³ÊÇ·ñÄÜÕı³£ÏÔÊ¾
      * @throws InterruptedException
      */
     @Test
-    public void gxOnlineCheck015() throws InterruptedException {
+    public void gxOnlineCheckCase015() throws InterruptedException {
+        Reporter.log("http://www.gxzg.org.cn");
         driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.get("http://www.gxzg.org.cn");
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).click();
-        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).sendKeys("çº³ç½‘");
+        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).sendKeys("ÄÉÍø");
         driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/a")).click();
         WebDriverWait wait = new WebDriverWait(driver,10,1);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"searchCompanyLine\"]/li[1]/div[2]/h6/a[1]")));
         Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[1]/div[2]/h6/a[1]"))
-                .getText(),"åŒ—äº¬çº³ç½‘ç§‘æŠ€æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[2]/div[2]/h6/a[1]")).getText(),"å¦é—¨çº³ç½‘ç§‘æŠ€è‚¡ä»½æœ‰é™å…¬å¸");
+                .getText(),"±±¾©ÄÉÍø¿Æ¼¼ÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[2]/div[2]/h6/a[1]")).getText(),"ÏÃÃÅÄÉÍø¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾");
         driver.findElement(By.xpath("/html/body/div[2]/ul/li[2]")).click();
         Thread.sleep(5000);
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/a")).getText(),"å¦é—¨çº³ç½‘ç§‘æŠ€è‚¡ä»½æœ‰é™å…¬å¸å®˜ç½‘");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/span[1]")).getText(),"ä¿¡ç”¨å®˜ç½‘");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/a")).getText(),"ÏÃÃÅÄÉÍø¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾¹ÙÍø");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/span[1]")).getText(),"ĞÅÓÃ¹ÙÍø");
         Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/a")).getText(),"www.nawang.cn");
         driver.findElement(By.xpath("/html/body/div[2]/ul/li[3]")).click();
         Thread.sleep(5000);
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6335\"]")).getAttribute("pname"),"ä¿¡ç”¨å®˜ç½‘-å®‰å…¨å¯ä¿¡èµ–çš„å®˜ç½‘å½¢è±¡");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[1]/div[2]/div[2]/span")).getText(),"åŒ—äº¬çº³ç½‘ç§‘æŠ€æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6336\"]")).getAttribute("pname"),"ä¿¡ç”¨ç›´è´­-å•†å“ç›´è´­è¾¨ä¼ª");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[2]/div[2]/div[2]/span")).getText(),"åŒ—äº¬çº³ç½‘ç§‘æŠ€æœ‰é™å…¬å¸");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6335\"]")).getAttribute("pname"),"ĞÅÓÃ¹ÙÍø-°²È«¿ÉĞÅÀµµÄ¹ÙÍøĞÎÏó");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[1]/div[2]/div[2]/span")).getText(),"±±¾©ÄÉÍø¿Æ¼¼ÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6336\"]")).getAttribute("pname"),"ĞÅÓÃÖ±¹º-ÉÌÆ·Ö±¹º±æÎ±");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[2]/div[2]/div[2]/span")).getText(),"±±¾©ÄÉÍø¿Æ¼¼ÓĞÏŞ¹«Ë¾");
     }
 
     /**
-     * https://www.gxzg.org.cn      æŸ¥çœ‹ç½‘å€é¦–é¡µæ˜¾ç¤ºæ˜¯å¦æ­£å¸¸ï¼ŒæŸ¥ä¼ä¸šã€æŸ¥ç½‘ç«™ã€æŸ¥äº§å“åŠŸèƒ½æ˜¯å¦æ­£å¸¸ã€å„è¯¦æƒ…é¡µæ˜¯å¦èƒ½æ­£å¸¸æ˜¾ç¤º
+     * https://www.gxzg.org.cn      ²é¿´ÍøÖ·Ê×Ò³ÏÔÊ¾ÊÇ·ñÕı³££¬²éÆóÒµ¡¢²éÍøÕ¾¡¢²é²úÆ·¹¦ÄÜÊÇ·ñÕı³£¡¢¸÷ÏêÇéÒ³ÊÇ·ñÄÜÕı³£ÏÔÊ¾
      * @throws InterruptedException
      */
     @Test
     public void gxOnlineCheckCase016() throws InterruptedException {
+        Reporter.log("https://www.gxzg.org.cn");
         driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.get("https://www.gxzg.org.cn");
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).click();
-        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).sendKeys("çº³ç½‘");
+        driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/input")).sendKeys("ÄÉÍø");
         driver.findElement(By.xpath("/html/body/ul/li[2]/dl/dd/a")).click();
         WebDriverWait wait = new WebDriverWait(driver,10,1);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"searchCompanyLine\"]/li[1]/div[2]/h6/a[1]")));
         Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[1]/div[2]/h6/a[1]"))
-                .getText(),"åŒ—äº¬çº³ç½‘ç§‘æŠ€æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[2]/div[2]/h6/a[1]")).getText(),"å¦é—¨çº³ç½‘ç§‘æŠ€è‚¡ä»½æœ‰é™å…¬å¸");
+                .getText(),"±±¾©ÄÉÍø¿Æ¼¼ÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchCompanyLine\"]/li[2]/div[2]/h6/a[1]")).getText(),"ÏÃÃÅÄÉÍø¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾");
         driver.findElement(By.xpath("/html/body/div[2]/ul/li[2]")).click();
         Thread.sleep(5000);
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/a")).getText(),"å¦é—¨çº³ç½‘ç§‘æŠ€è‚¡ä»½æœ‰é™å…¬å¸å®˜ç½‘");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/span[1]")).getText(),"ä¿¡ç”¨å®˜ç½‘");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/a")).getText(),"ÏÃÃÅÄÉÍø¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾¹ÙÍø");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/span[1]")).getText(),"ĞÅÓÃ¹ÙÍø");
         Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchWebLine\"]/li[1]/div[2]/div[2]/div/a")).getText(),"www.nawang.cn");
         driver.findElement(By.xpath("/html/body/div[2]/ul/li[3]")).click();
         Thread.sleep(5000);
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6335\"]")).getAttribute("pname"),"ä¿¡ç”¨å®˜ç½‘-å®‰å…¨å¯ä¿¡èµ–çš„å®˜ç½‘å½¢è±¡");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[1]/div[2]/div[2]/span")).getText(),"åŒ—äº¬çº³ç½‘ç§‘æŠ€æœ‰é™å…¬å¸");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6336\"]")).getAttribute("pname"),"ä¿¡ç”¨ç›´è´­-å•†å“ç›´è´­è¾¨ä¼ª");
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[2]/div[2]/div[2]/span")).getText(),"åŒ—äº¬çº³ç½‘ç§‘æŠ€æœ‰é™å…¬å¸");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6335\"]")).getAttribute("pname"),"ĞÅÓÃ¹ÙÍø-°²È«¿ÉĞÅÀµµÄ¹ÙÍøĞÎÏó");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[1]/div[2]/div[2]/span")).getText(),"±±¾©ÄÉÍø¿Æ¼¼ÓĞÏŞ¹«Ë¾");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"6336\"]")).getAttribute("pname"),"ĞÅÓÃÖ±¹º-ÉÌÆ·Ö±¹º±æÎ±");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"searchShopLine\"]/li[2]/div[2]/div[2]/span")).getText(),"±±¾©ÄÉÍø¿Æ¼¼ÓĞÏŞ¹«Ë¾");
     }
 }
